@@ -1,0 +1,11 @@
+{
+    "$schema": "./node_modules/ng-packagr/package.schema.json",
+    "name": "ng-mention",
+    "version": "1.0.0",
+    "ngPackage": {
+      "lib": {
+        "entryFile": "./src/lib/public_api.ts"
+      }     
+    },
+    "whitelistedNonPeerDependecies":["angular","core.js","rxjs","zone.js"]
+  }

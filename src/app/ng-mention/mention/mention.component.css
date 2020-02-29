@@ -1,0 +1,36 @@
+.bckg-container {
+  background-color: white;
+  height: 18px;
+  width: 170px;
+}
+
+.bckg {
+  height: 18px;
+  /* float: right; */
+  display: contents;
+  width: 170px;
+}
+
+.mention{
+  color: green;
+}
+
+.plain {
+  background-color: lightblue;
+  width: 0px;
+}
+.mention {
+  background-color: lightblue;
+  width: 0px;
+}
+
+.inpt {
+  position: absolute;
+  margin-top: -20px ;
+  background-color: transparent;
+  color: transparent;
+  width: 170px;
+  font-family: Arial;
+  line-height: 13px;
+  font-size: 12px;
+}

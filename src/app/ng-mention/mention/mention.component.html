@@ -1,1 +1,12 @@
-<p>mention works!</p>
+<div class="bckg-container">
+  <ng-container  *ngFor="let item of data">
+    <div id="bckg-mention" *ngIf="item.type == stringType.MENTION" [ngStyle]="{width: item.width}" class="bckg mention">
+      {{item.value}}
+    </div>
+    <div id="bckg-plain" *ngIf="item.type == stringType.PLAIN_TEXT" [ngStyle]="{width: item.width}" class="bckg plain">
+      {{item.value}}
+    </div>
+  </ng-container>
+  <br style="clear: left;" />
+</div>
+<input class="inpt" type="text" [(ngModel)]="rawText" (keyup)="onTextChange($event)" placeholder="Add leading/trailing spaces" maxlength="20" />

@@ -33,4 +33,9 @@
   font-family: Arial;
   line-height: 13px;
   font-size: 12px;
+  caret-color: black;
+}
+
+.hidden{
+  visibility: hidden;
 }

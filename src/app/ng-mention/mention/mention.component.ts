@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 
 export enum stringType {
   PLAIN_TEXT,
@@ -14,7 +14,9 @@ export enum stringType {
 export class MentionComponent implements OnInit {
   stringType = stringType;
   rawText: string;
+  valueForHidden: string;
   data: Array<{ type: stringType; value: string; width: number }>;
+  @ViewChild('hidenInput') hidenInp : ElementRef;
 
   constructor() {}
 
@@ -33,10 +35,11 @@ export class MentionComponent implements OnInit {
     this.data = new Array<{ type: stringType; value: string; width: number }>();
     split.forEach(splited => {
       flag = !flag;
+      this.valueForHidden = splited;
       this.data.push({
         type: flag ? stringType.MENTION : stringType.PLAIN_TEXT,
         value: splited,
-        width: splited.length
+        width: this.hidenInp.nativeElement.width
       });
     });
   }

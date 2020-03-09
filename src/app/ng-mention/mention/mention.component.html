@@ -10,3 +10,6 @@
   <br style="clear: left;" />
 </div>
 <input class="inpt" type="text" [(ngModel)]="rawText" (keyup)="onTextChange($event)" placeholder="Add leading/trailing spaces" maxlength="20" />
+
+
+<input #hidenInput class="hidden" [(ngModel)]="valueForHidden">
